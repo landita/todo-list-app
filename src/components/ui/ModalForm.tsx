@@ -1,7 +1,8 @@
 import { TextInput, Textarea, Checkbox, Button } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 import { useForm, yupResolver } from '@mantine/form';
-import { TbPencil } from 'react-icons/tb';
+import { TbPencil, TbCheck } from 'react-icons/tb';
+import { notifications } from '@mantine/notifications';
 import * as Yup from 'yup';
 import { todoStore } from '../../store';
 
@@ -38,6 +39,16 @@ export const ModalForm = ({ close }: Props) => {
         values.id = todos.length + 1;
         addTodo(values);
         close();
+        notifications.show({
+          autoClose: 5000,
+          title: 'Your task has been added',
+          message: `Checkout The ${
+            values.isCompleted ? 'Completed Tasks Tab' : 'Pending Tasks Tab'
+          }`,
+          color: 'green',
+          icon: <TbCheck />,
+          loading: false,
+        });
       })}
     >
       <TextInput

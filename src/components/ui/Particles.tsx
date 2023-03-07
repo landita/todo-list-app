@@ -26,28 +26,6 @@ export const ParticlesLayout = () => {
           },
         },
         fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
-            onHover: {
-              enable: true,
-              mode: 'repulse',
-            },
-            resize: true,
-          },
-          modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.8,
-            },
-          },
-        },
         particles: {
           color: {
             value: '#ffffff',
