@@ -1,7 +1,6 @@
 import { MantineProvider } from '@mantine/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ParticlesLayout } from './components/ui';
 import Home from './pages/home/Home';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -15,8 +14,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         fontFamily: "'Nunito', sans-serif;",
       }}
     >
-      <ParticlesLayout />
-
       <Home />
     </MantineProvider>
   </React.StrictMode>,
